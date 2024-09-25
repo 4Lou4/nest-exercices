@@ -1,9 +1,13 @@
 import { TodoStatus } from '../enums/todo-status.enum';
 
-export class TodoModel {
-  id: number;
+export class Todo {
+  id: string;
+
   name: string;
+
   description: string;
+
   creationDate: Date;
+
   status: TodoStatus;
 }
