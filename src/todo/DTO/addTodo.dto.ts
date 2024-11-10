@@ -1,6 +1,8 @@
+import { Type } from 'class-transformer';
 import {
   IsNotEmpty,
-  Max,
+  IsNumber,
+  IsString,
   MaxLength,
   MinLength,
   ValidationArguments,
@@ -28,4 +30,9 @@ export class AddTodoDTO {
     },
   })
   description: string;
+
+  @IsNumber()
+  @IsNotEmpty()
+  @Type(() => Number)
+  priority: number;
 }
